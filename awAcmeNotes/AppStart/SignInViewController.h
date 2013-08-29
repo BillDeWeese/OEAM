@@ -11,6 +11,10 @@
 @interface SignInViewController : UITableViewController <UIAlertViewDelegate>
 
 
+@property (nonatomic, weak) IBOutlet UITableViewCell *DomainCell;
+@property (nonatomic, weak) IBOutlet UITextField *Domain_TextField;
+
+
 -(IBAction)cancel_onClick:(id)sender;
 -(IBAction)signIn_onClick:(id)sender;
 

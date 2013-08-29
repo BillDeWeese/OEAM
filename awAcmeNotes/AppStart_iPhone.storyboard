@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4504" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="g3D-1h-BOF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="g3D-1h-BOF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3734.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
     </dependencies>
     <scenes>
         <!--Sign Up View Controller - Sign up-->
@@ -143,6 +143,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pom-b0-Ue0">
                                                     <rect key="frame" x="43" y="7" width="234" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Sign up">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -187,7 +188,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fD3-rR-7L3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-1100"/>
+            <point key="canvasLocation" x="-247" y="-1452"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="PYf-ol-6NL">
@@ -204,6 +205,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="myC-kN-oeP">
                                 <rect key="frame" x="20" y="386" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -214,6 +216,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4dV-nB-WQK">
                                 <rect key="frame" x="202" y="386" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign in >">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -250,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSl-yN-EDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-559" y="-797"/>
+            <point key="canvasLocation" x="-861" y="-1149"/>
         </scene>
         <!--Setup Nav Controller-->
         <scene sceneID="0YE-E6-dyw">
@@ -265,7 +268,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3z-gE-P2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1157" y="-797"/>
+            <point key="canvasLocation" x="-1459" y="-1149"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="UPH-uL-qWD">
@@ -378,10 +381,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="DomainCell" destination="RXz-79-i3z" id="Dwl-So-OcH"/>
+                        <outlet property="Domain_TextField" destination="2Fk-44-54k" id="Ur2-ox-Z5E"/>
+                        <segue destination="5bg-Ff-Go5" kind="push" identifier="NewUser" id="Frd-hp-Ga8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MuC-bg-Kxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-407"/>
+            <point key="canvasLocation" x="-247" y="-759"/>
         </scene>
         <!--Settings View Controller - App Settings-->
         <scene sceneID="ZHa-7J-G3s">
@@ -585,6 +593,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hhk-EZ-06K">
                                                     <rect key="frame" x="20" y="7" width="218" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Turn Passcode On">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -602,6 +611,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BDs-hf-iOi">
                                                     <rect key="frame" x="20" y="7" width="255" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Change Passcode">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -708,7 +718,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvN-nv-SrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="-1090"/>
+            <point key="canvasLocation" x="1632" y="-1100"/>
         </scene>
         <!--Cellular View Controller - Cellular-->
         <scene sceneID="2Ux-xY-Qe4">
@@ -965,4 +975,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Frd-hp-Ga8"/>
+    </inferredMetricsTieBreakers>
 </document>

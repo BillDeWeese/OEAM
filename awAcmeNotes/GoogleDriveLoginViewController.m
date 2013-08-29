@@ -18,8 +18,6 @@ static NSString *const kClientSecret = @"ovAg27caGJbIVhp6RLLi3NU6";
 
 @interface GoogleDriveLoginViewController ()
 
-@property (weak, readonly) GTLServiceDrive *driveService;
-
 - (void)viewController:(GTMOAuth2ViewControllerTouch *)viewController
       finishedWithAuth:(GTMOAuth2Authentication *)auth
                  error:(NSError *)error;
@@ -65,6 +63,23 @@ static NSString *const kClientSecret = @"ovAg27caGJbIVhp6RLLi3NU6";
     }
 }
 
+- (GTLServiceDrive *)driveService {
+    static GTLServiceDrive *service = nil;
+    
+    if (!service) {
+        service = [[GTLServiceDrive alloc] init];
+        
+        // Have the service object set tickets to fetch consecutive pages
+        // of the feed so we do not need to manually fetch them.
+        service.shouldFetchNextPages = YES;
+        
+        // Have the service object set tickets to retry temporary error conditions
+        // automatically.
+        service.retryEnabled = YES;
+    }
+    return service;
+}
+
 - (void)viewController:(GTMOAuth2ViewControllerTouch *)viewController
       finishedWithAuth:(GTMOAuth2Authentication *)auth
                  error:(NSError *)error {
@@ -77,6 +92,8 @@ static NSString *const kClientSecret = @"ovAg27caGJbIVhp6RLLi3NU6";
 
 - (void)isAuthorizedWithAuthentication:(GTMOAuth2Authentication *)auth {
     [[self driveService] setAuthorizer:auth];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:auth.userEmail forKey:@"GoogleDrive"];
 }
 
 - (void)didReceiveMemoryWarning

@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "awAcmeNotes/AppDelegate.m"
-            timestampString = "399440862.198946"
+            timestampString = "399442117.644589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-login_Success:"
             landmarkType = "5">
          </BreakpointContent>

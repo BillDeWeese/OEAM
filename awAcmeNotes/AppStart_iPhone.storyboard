@@ -503,6 +503,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="AzR-w3-SO6">
                                                     <rect key="frame" x="256" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="AllowTextCopy_onChange:" destination="5bg-Ff-Go5" eventType="valueChanged" id="gFs-YJ-ZwK"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -553,7 +556,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="AllowTextCopy" destination="gvC-ZT-USX" id="VS7-Np-WBs"/>
+                        <outlet property="AllowTextCopy" destination="AzR-w3-SO6" id="rUh-FB-bZp"/>
                         <outlet property="CellularData" destination="RGW-e6-URX" id="Iud-NN-oAP"/>
                         <outlet property="CloudServices" destination="Wyh-Oa-O5c" id="IjQ-Aw-Isu"/>
                         <outlet property="Logging" destination="rmz-Sv-Nja" id="G0m-nR-a8z"/>

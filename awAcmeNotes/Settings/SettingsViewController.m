@@ -28,13 +28,35 @@
     [super viewWillAppear:animated];
     [[self navigationController] setNavigationBarHidden:NO animated:NO];
     [self.navigationItem setHidesBackButton:YES];
+  
     
-    int selectedLogLevel = [[[NSUserDefaults standardUserDefaults] valueForKey:@"LogLevel"] integerValue];
-    if (selectedLogLevel == 0) {
+    ////////////////////////////////////
+    ///  LogLevel
+    ////////////////////////////////////
+    int savedValue_LogLevel = [[[NSUserDefaults standardUserDefaults] valueForKey:@"LogLevel"] integerValue];
+    if (savedValue_LogLevel == 0) {
         [self.Logging.detailTextLabel setText:@"Off"];
     }else{
         [self.Logging.detailTextLabel setText:@"On"];
     }
+    
+    
+    ////////////////////////////////////
+    ///  Allow Text Copy
+    ////////////////////////////////////
+    // Set some defaults.
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"AllowTextCopy"] == nil) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"AllowTextCopy"];
+    }
+    BOOL savedValue_AllowTextCopy = [[NSUserDefaults standardUserDefaults] boolForKey:@"AllowTextCopy"];
+    if (savedValue_AllowTextCopy == 0) {
+        self.AllowTextCopy.on = NO;
+    }else{
+         self.AllowTextCopy.on = YES;
+    }
+    
+    
+    
 }
 
 
@@ -65,5 +87,11 @@
     [[NSNotificationQueue defaultQueue] enqueueNotification: [NSNotification notificationWithName: @"login_Success" object: nil] postingStyle: NSPostNow];
 };
 
+
+-(IBAction)AllowTextCopy_onChange:(id)sender{
+
+    [[NSUserDefaults standardUserDefaults] setBool:self.AllowTextCopy.on forKey:@"AllowTextCopy"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 @end

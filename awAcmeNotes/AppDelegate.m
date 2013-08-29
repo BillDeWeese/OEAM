@@ -14,6 +14,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+
+
+    
+    
     // Override point for customization after application launch.
     [[NSNotificationCenter defaultCenter] addObserver:[Notes class]
                                              selector:@selector(dataUpdatedFromCloud:)

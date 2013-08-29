@@ -117,14 +117,15 @@
 
 -(IBAction)next_onClick:(id)sender{
   
-    [[NSNotificationQueue defaultQueue] enqueueNotification: [NSNotification notificationWithName: @"login_Success" object: nil] postingStyle: NSPostNow];
-    
     [[NSUserDefaults standardUserDefaults] setValue:self.Username_TextField.text forKey:@"LastUser"];
     
     NSString *key = [NSString stringWithFormat:@"%@_%@",self.Username_TextField.text, @"didVisitSettings" ];
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:key];
  
     [[NSUserDefaults standardUserDefaults] synchronize];
+  
+    [self performSegueWithIdentifier:@"NewUser" sender:self];
+    
     
 };
 

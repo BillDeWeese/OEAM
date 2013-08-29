@@ -44,7 +44,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self.Password_TextField addTarget:self action:@selector(setNextWizardButton) forControlEvents:UIControlEventEditingChanged];
+    [self.Username_TextField addTarget:self action:@selector(setNextWizardButton) forControlEvents:UIControlEventEditingChanged];
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -53,14 +58,6 @@
 }
 
 
-
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    
-    [self setNextWizardButton];
-  
-    return YES;
-}
 
 -(void)setNextWizardButton{
   
@@ -89,7 +86,7 @@
     UIBarButtonItem* menuItem = [[UIBarButtonItem alloc] initWithTitle:@"Next"
                                                                  style:UIBarButtonItemStylePlain
                                                                 target:self
-                                                                action:@selector(signIn_onClick:)];
+                                                                action:@selector(next_onClick:)];
     
     self.navigationItem.rightBarButtonItem = menuItem;
     
@@ -117,8 +114,18 @@
    [[NSNotificationQueue defaultQueue] enqueueNotification: [NSNotification notificationWithName: @"login_Success" object: nil] postingStyle: NSPostNow];
 };
 
+
 -(IBAction)next_onClick:(id)sender{
+  
     [[NSNotificationQueue defaultQueue] enqueueNotification: [NSNotification notificationWithName: @"login_Success" object: nil] postingStyle: NSPostNow];
+    
+    [[NSUserDefaults standardUserDefaults] setValue:self.Username_TextField.text forKey:@"LastUser"];
+    
+    NSString *key = [NSString stringWithFormat:@"%@_%@",self.Username_TextField.text, @"didVisitSettings" ];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:key];
+ 
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
 };
 
 

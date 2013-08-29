@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignInViewController : UITableViewController <UIAlertViewDelegate>
+@interface SignInViewController : UITableViewController <UIAlertViewDelegate, UITextFieldDelegate>
+
+
+@property (nonatomic, weak) IBOutlet UITableViewCell *DomainCell;
+@property (nonatomic, weak) IBOutlet UITextField *Domain_TextField;
+@property (nonatomic, weak) IBOutlet UITextField *Username_TextField;
+@property (nonatomic, weak) IBOutlet UITextField *Password_TextField;
 
 
 -(IBAction)cancel_onClick:(id)sender;

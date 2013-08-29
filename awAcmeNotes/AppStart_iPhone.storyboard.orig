@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4504" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="g3D-1h-BOF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="g3D-1h-BOF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3734.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
     </dependencies>
     <scenes>
         <!--Sign Up View Controller - Sign up-->
@@ -143,6 +143,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pom-b0-Ue0">
                                                     <rect key="frame" x="43" y="7" width="234" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Sign up">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -187,7 +188,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fD3-rR-7L3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-1100"/>
+            <point key="canvasLocation" x="-247" y="-1452"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="PYf-ol-6NL">
@@ -204,6 +205,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="myC-kN-oeP">
                                 <rect key="frame" x="20" y="386" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -214,6 +216,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4dV-nB-WQK">
                                 <rect key="frame" x="202" y="386" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign in >">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -250,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSl-yN-EDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-559" y="-797"/>
+            <point key="canvasLocation" x="-861" y="-1149"/>
         </scene>
         <!--Setup Nav Controller-->
         <scene sceneID="0YE-E6-dyw">
@@ -265,7 +268,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3z-gE-P2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1157" y="-797"/>
+            <point key="canvasLocation" x="-1459" y="-1149"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="UPH-uL-qWD">
@@ -304,6 +307,9 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="UO8-IE-b7f" id="QMX-vI-25k"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -326,6 +332,9 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="UO8-IE-b7f" id="E8U-US-qbP"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -378,10 +387,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="DomainCell" destination="RXz-79-i3z" id="Dwl-So-OcH"/>
+                        <outlet property="Domain_TextField" destination="2Fk-44-54k" id="Ur2-ox-Z5E"/>
+                        <outlet property="Password_TextField" destination="37T-0M-0Fr" id="ova-XC-eBE"/>
+                        <outlet property="Username_TextField" destination="rT7-x3-j54" id="YUf-eK-x27"/>
+                        <segue destination="5bg-Ff-Go5" kind="push" identifier="NewUser" id="Frd-hp-Ga8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MuC-bg-Kxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-407"/>
+            <point key="canvasLocation" x="-247" y="-759"/>
         </scene>
         <!--Settings View Controller - App Settings-->
         <scene sceneID="ZHa-7J-G3s">
@@ -585,9 +601,13 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hhk-EZ-06K">
                                                     <rect key="frame" x="20" y="7" width="218" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Turn Passcode On">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="ydy-qe-La8" kind="push" identifier="setPasscode" id="NBZ-YH-MgX"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -602,9 +622,13 @@
                                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BDs-hf-iOi">
                                                     <rect key="frame" x="20" y="7" width="255" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Change Passcode">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="ydy-qe-La8" kind="push" identifier="changePasscode" id="7LU-qv-fSU"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -616,10 +640,79 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Passcode" id="scu-fb-kqD"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="changePasscodeButton" destination="BDs-hf-iOi" id="OXQ-ia-r3L"/>
+                        <outlet property="setPasscodeButton" destination="Hhk-EZ-06K" id="7ff-0u-QuB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2w-cy-5Z0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1185" y="-1849"/>
+        </scene>
+        <!--Passcode View Controller - Set Passcode-->
+        <scene sceneID="HSj-Et-Xij">
+            <objects>
+                <viewController id="ydy-qe-La8" customClass="PasscodeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lPs-mX-WlU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a passcode" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KGC-Om-FfD">
+                                <rect key="frame" x="20" y="83" width="280" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4a7-5T-U2X">
+                                <rect key="frame" x="114" y="112" width="19" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="23Q-mN-300">
+                                <rect key="frame" x="138" y="112" width="19" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ULu-UM-xcR">
+                                <rect key="frame" x="163" y="112" width="19" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TI7-7t-jAD">
+                                <rect key="frame" x="187" y="112" width="19" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="UTD-gy-Mqd">
+                                <rect key="frame" x="112" y="161" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ydy-qe-La8" id="GMI-Eg-Fqd"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89803928136825562" green="0.89803928136825562" blue="0.89803928136825562" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Set Passcode" id="vv1-wa-7Ah"/>
+                    <connections>
+                        <outlet property="passChar1" destination="4a7-5T-U2X" id="d3E-g9-lVW"/>
+                        <outlet property="passChar2" destination="23Q-mN-300" id="nat-iM-cLO"/>
+                        <outlet property="passChar3" destination="ULu-UM-xcR" id="R8G-A1-T9e"/>
+                        <outlet property="passChar4" destination="TI7-7t-jAD" id="HZr-Bz-i7E"/>
+                        <outlet property="passcodeLabel" destination="KGC-Om-FfD" id="wSg-HV-Hh4"/>
+                        <outlet property="passcodeTextField" destination="UTD-gy-Mqd" id="Nli-Ws-u6t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J5S-ci-cPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="-1853"/>
         </scene>
         <!--Cloud Services View Controller - Cloud Services-->
         <scene sceneID="IjK-Du-5IJ">
@@ -677,7 +770,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="hWy-UM-vPa" kind="push" id="DiI-T3-Fne"/>
+                                            <segue destination="Yy8-jZ-Xzs" kind="push" id="rDE-Sp-81f"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -688,33 +781,29 @@
                     <navigationItem key="navigationItem" title="Cloud Services" id="ZNs-XL-q8d"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="GoogleDriveCellTextLabel" destination="tZy-z7-Ssf" id="HAy-nH-vlL"/>
+                        <outlet property="GoogleDriveCellTextLabel" destination="tZy-z7-Ssf" id="E7q-9q-riv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="415-Pm-Mfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1185" y="-1100"/>
         </scene>
-<<<<<<< HEAD
         <!--Google Drive Login View Controller-->
-        <scene sceneID="Lng-ZD-Igw">
+        <scene sceneID="Mvl-VS-4Es">
             <objects>
-                <viewController id="hWy-UM-vPa" customClass="GoogleDriveLoginViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Gc3-kz-iEG">
+                <viewController id="Yy8-jZ-Xzs" customClass="GoogleDriveLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3uM-Cs-kbX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1ki-fW-cPZ"/>
+                    <navigationItem key="navigationItem" id="3Pn-Fw-sG1"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wtF-Ey-Lyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FvN-nv-SrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="-1100"/>
+            <point key="canvasLocation" x="1632" y="-1100"/>
         </scene>
-        <!--Cloud Services View Controller - Cellular-->
-=======
         <!--Cellular View Controller - Cellular-->
->>>>>>> initial
         <scene sceneID="2Ux-xY-Qe4">
             <objects>
                 <tableViewController id="5Ae-lc-Emq" customClass="CellularViewController" sceneMemberID="viewController">
@@ -969,4 +1058,11 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+<<<<<<< HEAD
+        <segue reference="7LU-qv-fSU"/>
+=======
+        <segue reference="Frd-hp-Ga8"/>
+>>>>>>> 87070deb010c4d1fa0055d8bf021fb1932544705
+    </inferredMetricsTieBreakers>
 </document>

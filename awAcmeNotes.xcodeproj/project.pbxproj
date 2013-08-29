@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1228490B17CF1FF800345D50 /* GoogleDriveLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1228490A17CF1FF800345D50 /* GoogleDriveLoginViewController.m */; };
+		1228490F17CF97D900345D50 /* PasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1228490E17CF97D900345D50 /* PasscodeViewController.m */; };
 		122B698117CF1EF40049530F /* GTLBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 122B692717CF1EF30049530F /* GTLBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		122B698217CF1EF40049530F /* GTLBatchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 122B692917CF1EF30049530F /* GTLBatchQuery.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		122B698317CF1EF40049530F /* GTLBatchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 122B692B17CF1EF30049530F /* GTLBatchResult.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -139,6 +140,8 @@
 /* Begin PBXFileReference section */
 		1228490917CF1FF800345D50 /* GoogleDriveLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleDriveLoginViewController.h; sourceTree = "<group>"; };
 		1228490A17CF1FF800345D50 /* GoogleDriveLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleDriveLoginViewController.m; sourceTree = "<group>"; };
+		1228490D17CF97D900345D50 /* PasscodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasscodeViewController.h; sourceTree = "<group>"; };
+		1228490E17CF97D900345D50 /* PasscodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasscodeViewController.m; sourceTree = "<group>"; };
 		122B692617CF1EF30049530F /* GTLBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBase64.h; sourceTree = "<group>"; };
 		122B692717CF1EF30049530F /* GTLBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLBase64.m; sourceTree = "<group>"; };
 		122B692817CF1EF30049530F /* GTLBatchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBatchQuery.h; sourceTree = "<group>"; };
@@ -360,6 +363,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1228490C17CF97C700345D50 /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				1228490D17CF97D900345D50 /* PasscodeViewController.h */,
+				1228490E17CF97D900345D50 /* PasscodeViewController.m */,
+			);
+			name = Passcode;
+			sourceTree = "<group>";
+		};
 		122B692417CF1EC20049530F /* Google API Stuff */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,6 +618,7 @@
 		964EF7B717CC0506006A02F2 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				1228490C17CF97C700345D50 /* Passcode */,
 				96AA7B5617CE451E008300BE /* AboutViewController.h */,
 				96AA7B5717CE451E008300BE /* AboutViewController.m */,
 				96C2272B17CED8F300F555BB /* SettingsViewController.h */,
@@ -897,6 +910,7 @@
 				122B698717CF1EF40049530F /* GTLDriveAppList.m in Sources */,
 				122B69A517CF1EF40049530F /* GTMHTTPUploadFetcher.m in Sources */,
 				122B69A017CF1EF40049530F /* GTMGatherInputStream.m in Sources */,
+				1228490F17CF97D900345D50 /* PasscodeViewController.m in Sources */,
 				96F66ABC17CEF7D600E8138D /* LoggingViewController.m in Sources */,
 				122B698C17CF1EF40049530F /* GTLDriveConstants.m in Sources */,
 				122B699217CF1EF40049530F /* GTLDrivePermissionList.m in Sources */,

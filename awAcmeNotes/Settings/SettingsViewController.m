@@ -75,6 +75,16 @@
        [self.CellularData.detailTextLabel setText:@"On"];
     }
     
+    ////////////////////////////////////
+    ///  AllowCellData
+    ////////////////////////////////////
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"Passcode"] != nil)
+    {
+        _RequirePasscode.detailTextLabel.text = @"On";
+    }else{
+        _RequirePasscode.detailTextLabel.text = @"Off";
+    }
+    
     
     
 }

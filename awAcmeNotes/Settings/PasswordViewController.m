@@ -7,6 +7,7 @@
 //
 
 #import "PasswordViewController.h"
+#import "PasscodeViewController.h"
 
 @interface PasswordViewController ()
 
@@ -28,8 +29,44 @@
     [super viewWillAppear:animated];
     [[self navigationController] setNavigationBarHidden:NO animated:NO];
     [self.navigationItem setHidesBackButton:NO];
+    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"Passcode"] != nil)
+    {
+        //_setPasscodeButton.enabled = NO;
+
+        [_setPasscodeButton setTitle:@"Turn Passcode Off" forState:UIControlStateNormal];
+        //_setPasscodeButton.titleLabel.text = @"Turn Passcode Off";
+        
+        _changePasscodeButton.enabled = YES;
+    }
+    else
+    {
+        _setPasscodeButton.enabled = YES;
+        [_setPasscodeButton setTitle:@"Turn Passcode On" forState:UIControlStateNormal];
+        
+        _changePasscodeButton.enabled = NO;
+    }
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    PasscodeViewController *viewController = [segue destinationViewController];
+    if([segue.identifier isEqualToString:@"setPasscode"])
+    {
+        viewController.isChanging = NO;
+        
+        if([[NSUserDefaults standardUserDefaults] objectForKey:@"Passcode"] != nil)
+            viewController.isTurningOff = YES;
+        else
+            viewController.isTurningOff = NO;
+    }
+    else if([segue.identifier isEqualToString:@"changePasscode"])
+    {
+        viewController.isChanging = YES;
+    }
+    
+    
+}
 
 - (void)viewDidLoad
 {

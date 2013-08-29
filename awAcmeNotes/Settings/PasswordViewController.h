@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface PasswordViewController : UITableViewController
+{
+    
+}
+
+@property (weak) IBOutlet UIButton *setPasscodeButton;
+@property (weak) IBOutlet UIButton *changePasscodeButton;
 
 @end

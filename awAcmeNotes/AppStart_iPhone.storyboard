@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="g3D-1h-BOF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4504" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="g3D-1h-BOF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3734.1"/>
     </dependencies>
     <scenes>
         <!--Sign Up View Controller - Sign up-->
@@ -605,6 +605,9 @@
                                                     <state key="normal" title="Turn Passcode On">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="aW4-mu-Onl" kind="push" identifier="setPasscode" id="7rB-tp-Gft"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -623,6 +626,9 @@
                                                     <state key="normal" title="Change Passcode">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="aW4-mu-Onl" kind="push" identifier="changePasscode" id="ZrC-fk-uBK"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -634,6 +640,10 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Passcode" id="scu-fb-kqD"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="changePasscodeButton" destination="BDs-hf-iOi" id="ZLh-c3-ycx"/>
+                        <outlet property="setPasscodeButton" destination="Hhk-EZ-06K" id="s2E-tB-IU7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2w-cy-5Z0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -974,6 +984,71 @@
             </objects>
             <point key="canvasLocation" x="1185" y="339"/>
         </scene>
+        <!--Passcode View Controller - Set Passcode-->
+        <scene sceneID="CiD-dc-wWI">
+            <objects>
+                <viewController id="aW4-mu-Onl" customClass="PasscodeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="moK-zA-nC5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a passcode" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ec7-P9-kM0">
+                                <rect key="frame" x="20" y="83" width="280" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cB3-is-F2g">
+                                <rect key="frame" x="114" y="112" width="19" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ork-Zy-hTC">
+                                <rect key="frame" x="138" y="112" width="19" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZMz-24-5v9">
+                                <rect key="frame" x="163" y="112" width="19" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pz9-Yx-JbF">
+                                <rect key="frame" x="187" y="112" width="19" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="cD5-Cz-2eA">
+                                <rect key="frame" x="112" y="161" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="aW4-mu-Onl" id="qiw-9C-aQQ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8980392814" green="0.8980392814" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Set Passcode" id="cpv-2E-Xb8"/>
+                    <connections>
+                        <outlet property="passChar1" destination="cB3-is-F2g" id="Yyg-Xg-6gP"/>
+                        <outlet property="passChar2" destination="ork-Zy-hTC" id="Kox-7w-Ymh"/>
+                        <outlet property="passChar3" destination="ZMz-24-5v9" id="ceM-2B-1UN"/>
+                        <outlet property="passChar4" destination="pz9-Yx-JbF" id="vmw-s3-0J4"/>
+                        <outlet property="passcodeLabel" destination="ec7-P9-kM0" id="ESW-C0-lts"/>
+                        <outlet property="passcodeTextField" destination="cD5-Cz-2eA" id="To3-VM-P3x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ol-uu-cJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="-1853"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Cloud.png" width="280" height="235"/>
@@ -985,5 +1060,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Frd-hp-Ga8"/>
+        <segue reference="7rB-tp-Gft"/>
     </inferredMetricsTieBreakers>
 </document>

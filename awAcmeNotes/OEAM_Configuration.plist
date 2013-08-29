@@ -78,8 +78,6 @@
 			<false/>
 			<key>allowRoaming</key>
 			<false/>
-			<key>allowScreenCapture</key>
-			<false/>
 			<key>allowCloudSync</key>
 			<true/>
 			<key>allowedCloudSyncApps</key>
@@ -93,9 +91,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>Custom1</key>
-	<string></string>
-	<key>CustomN</key>
-	<string></string>
 </dict>
 </plist>

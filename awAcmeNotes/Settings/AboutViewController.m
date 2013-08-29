@@ -86,7 +86,7 @@
     self.MDMURL_value.font =  valueLabelFont;
     self.MDMURL_value.text = @"https://demo2.awmdm.com";
     
-    self.AppImage.image = [UIImage imageNamed:@"cloudnotes.jpeg"];
+    self.AppImage.image = [UIImage imageNamed:@"Cloud"];
     self.AppImage.contentMode = UIViewContentModeScaleAspectFill;
     self.AppImage.clipsToBounds = YES;
     self.AppImage.layer.borderWidth = 4.0f;

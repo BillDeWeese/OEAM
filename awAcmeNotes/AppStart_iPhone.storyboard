@@ -307,6 +307,9 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="UO8-IE-b7f" id="QMX-vI-25k"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -329,6 +332,9 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="UO8-IE-b7f" id="E8U-US-qbP"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -384,6 +390,8 @@
                     <connections>
                         <outlet property="DomainCell" destination="RXz-79-i3z" id="Dwl-So-OcH"/>
                         <outlet property="Domain_TextField" destination="2Fk-44-54k" id="Ur2-ox-Z5E"/>
+                        <outlet property="Password_TextField" destination="37T-0M-0Fr" id="ova-XC-eBE"/>
+                        <outlet property="Username_TextField" destination="rT7-x3-j54" id="YUf-eK-x27"/>
                         <segue destination="5bg-Ff-Go5" kind="push" identifier="NewUser" id="Frd-hp-Ga8"/>
                     </connections>
                 </tableViewController>

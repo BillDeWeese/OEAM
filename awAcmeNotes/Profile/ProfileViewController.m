@@ -28,6 +28,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
    
+    
+    BOOL USE_OEAM = [[NSUserDefaults standardUserDefaults] boolForKey:@"USE_OEAM"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:
+                          [[NSBundle mainBundle] pathForResource:@"OEAM_Configuration" ofType:@"plist"]];
+    
+    
     UIColor* mainColor = [UIColor colorWithRed:47.0/255 green:168.0/255 blue:228.0/255 alpha:1.0f];
     UIColor* darkColor = [UIColor colorWithRed:10.0/255 green:78.0/255 blue:108.0/255 alpha:1.0f];
     
@@ -40,10 +46,13 @@
     self.displayName.textColor =  mainColor;
     self.displayName.font =  [UIFont fontWithName:boldFontName size:18.0f];
     self.displayName.text = @"Bill DeWeese";
+    if (USE_OEAM) {self.displayName.text = [dict valueForKeyPath:@"OEAM.User.displayName"];}
+    
     
     self.mail.textColor =  mainColor;
     self.mail.font =  [UIFont fontWithName:boldItalicFontName size:14.0f];
     self.mail.text = @"BillDeWeese@air-watch.com";
+    if (USE_OEAM) {self.mail.text = [dict valueForKeyPath:@"OEAM.User.mail"];}
     
     
     UIFont *titleLabelFont = [UIFont fontWithName:fontName size:12.0f];
@@ -53,13 +62,16 @@
     self.UID_label.font =  titleLabelFont;
     self.UID_label.text = @"Username";
     
+    
     self.domain_label.textColor =  mainColor;
     self.domain_label.font =  titleLabelFont;
     self.domain_label.text = @"Domain";
     
+    
     self.givenName_label.textColor =  mainColor;
     self.givenName_label.font =  titleLabelFont;
     self.givenName_label.text = @"First Name";
+    
     
     self.SN_label.textColor =  mainColor;
     self.SN_label.font =  titleLabelFont;
@@ -69,18 +81,25 @@
     self.UID.textColor =  mainColor;
     self.UID.font =  valueLabelFont;
     self.UID.text = @"bdeweese";
+    if (USE_OEAM) {self.UID.text = [dict valueForKeyPath:@"OEAM.User.UID"];}
+    
     
     self.domain.textColor =  mainColor;
     self.domain.font =  valueLabelFont;
     self.domain.text = @"demo";
+    if (USE_OEAM) {self.domain.text = [dict valueForKeyPath:@"OEAM.User.domain"];}
+    
     
     self.givenName.textColor =  mainColor;
     self.givenName.font =  valueLabelFont;
     self.givenName.text = @"Bill";
+    if (USE_OEAM) {self.givenName.text = [dict valueForKeyPath:@"OEAM.User.givenName"];}
+    
     
     self.SN.textColor =  mainColor;
     self.SN.font =  valueLabelFont;
     self.SN.text = @"DeWeese";
+    if (USE_OEAM) {self.SN.text = [dict valueForKeyPath:@"OEAM.User.SN"];}
     
     
     self.profileImageView.image = [UIImage imageNamed:@"user.png"];

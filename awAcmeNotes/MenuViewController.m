@@ -28,6 +28,13 @@
 {
     [super viewDidLoad];
     
+    
+    BOOL USE_OEAM = [[NSUserDefaults standardUserDefaults] boolForKey:@"USE_OEAM"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:
+                          [[NSBundle mainBundle] pathForResource:@"OEAM_Configuration" ofType:@"plist"]];
+ 
+    
+    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
@@ -44,10 +51,14 @@
     self.AppTitleLabel.textColor = [UIColor whiteColor];
     self.AppTitleLabel.font = [UIFont fontWithName:fontName size:14.0f];
     self.AppTitleLabel.text = @"Bill DeWeese";
+    if (USE_OEAM) {self.AppTitleLabel.text = [dict valueForKeyPath:@"OEAM.User.displayName"];}
+    
     
     self.AppSubtitleLabel.textColor = mainColor;
     self.AppSubtitleLabel.font = [UIFont fontWithName:boldFontName size:10.0f];
     self.AppSubtitleLabel.text = @"billdeweese@air-watch.com";
+    if (USE_OEAM) {self.AppSubtitleLabel.text = [dict valueForKeyPath:@"OEAM.User.mail"];}
+    
     
     self.AppLogo.image = [UIImage imageNamed:@"userProfile.png"];
     self.AppLogo.clipsToBounds = YES;

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GTLDrive.h"
 @interface GoogleDriveLoginViewController : UIViewController
-
+{
+    
+}
++ (GTLServiceDrive *)driveService;
 @end

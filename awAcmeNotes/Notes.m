@@ -9,7 +9,8 @@
 #import "Notes.h"
 #import "Constants.h"
 #import "MasterViewController.h"
-
+#import "GTLDrive.h"
+#import "GoogleDriveLoginViewController.h"
 @implementation Notes
 
 static NSMutableDictionary *allNotes;
@@ -48,9 +49,64 @@ static NSString *currentKey;
     [[NSUbiquitousKeyValueStore defaultStore] setObject:allNotes forKey:kAllNotesKey];
     [[NSUbiquitousKeyValueStore defaultStore] synchronize];
  
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"GoogleDrive"] != nil)
+    {
+        for (NSString* key in allNotes) {
+            NSString *value = [allNotes objectForKey:key];
+            
+            BOOL isFileInDrive = NO;
+            
+            if([[NSUserDefaults standardUserDefaults] objectForKey:key] != nil)
+                isFileInDrive = YES;
+            
+            
+            GTLUploadParameters *uploadParameters = nil;
+            
+            NSData *data = [value dataUsingEncoding:NSUTF8StringEncoding];
+            
+            GTLDriveFile *file = [GTLDriveFile object];
+            file.title = [NSString stringWithFormat:@"%@.txt", key];
+            
+            uploadParameters = [GTLUploadParameters uploadParametersWithData:data MIMEType:@"text/plain"];
+            
+            GTLQueryDrive *query = nil;
+            
+            if(isFileInDrive)
+            {
+                query = [GTLQueryDrive queryForFilesUpdateWithObject:file
+                                                              fileId:[[NSUserDefaults standardUserDefaults] objectForKey:key]
+                                                    uploadParameters:uploadParameters];
+            }
+            else{
+                query = [GTLQueryDrive queryForFilesInsertWithObject:file uploadParameters:uploadParameters];
+            }
+            
+            [[GoogleDriveLoginViewController driveService] executeQuery:query completionHandler:^(GTLServiceTicket *ticket, GTLDriveFile *updatedFile, NSError *error) {
+                //
+                [[NSUserDefaults standardUserDefaults] setObject:updatedFile.identifier forKey:key];
+                if(error != nil)
+                {
+                    NSLog(@"An error occurred: %@", error);
+                }
+            }];
+
+            
+        }
+    }
 }
 +(void)removeObjectForKey:(NSString *)key
 {
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"GoogleDrive"] != nil)
+    {
+        GTLQuery *query = [GTLQueryDrive queryForFilesDeleteWithFileId:[[NSUserDefaults standardUserDefaults] objectForKey:key]];
+        [[GoogleDriveLoginViewController driveService] executeQuery:query completionHandler:^(GTLServiceTicket *ticket,     GTLDriveFile *updatedFile, NSError *error) {
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
+            if(error != nil)
+            {
+                NSLog(@"An error occurred: %@", error);
+            }
+        }];
+    }
     [allNotes removeObjectForKey:key];
 }
 

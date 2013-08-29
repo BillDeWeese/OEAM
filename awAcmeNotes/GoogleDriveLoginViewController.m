@@ -7,7 +7,6 @@
 //
 
 #import "GoogleDriveLoginViewController.h"
-#import "GTLDrive.h"
 #import "GTMOAuth2ViewControllerTouch.h"
 
 
@@ -63,7 +62,7 @@ static NSString *const kClientSecret = @"ovAg27caGJbIVhp6RLLi3NU6";
     }
 }
 
-- (GTLServiceDrive *)driveService {
++ (GTLServiceDrive *)driveService {
     static GTLServiceDrive *service = nil;
     
     if (!service) {
@@ -91,7 +90,7 @@ static NSString *const kClientSecret = @"ovAg27caGJbIVhp6RLLi3NU6";
 }
 
 - (void)isAuthorizedWithAuthentication:(GTMOAuth2Authentication *)auth {
-    [[self driveService] setAuthorizer:auth];
+    [[GoogleDriveLoginViewController driveService] setAuthorizer:auth];
     
     [[NSUserDefaults standardUserDefaults] setObject:auth.userEmail forKey:@"GoogleDrive"];
 }

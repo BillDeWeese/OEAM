@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CloudServicesViewController : UITableViewController
-
+{
+    
+}
+@property (nonatomic, weak) IBOutlet UILabel *GoogleDriveCellTextLabel;
 @end

@@ -20,6 +20,8 @@
                                                  name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
                                                object:[NSUbiquitousKeyValueStore defaultStore]];
     
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"GoogleDrive"];
+    
     [[NSUbiquitousKeyValueStore defaultStore] synchronize];
     
     [[NSNotificationCenter defaultCenter] addObserver:self

@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "awAcmeNotes/GoogleDriveLoginViewController.m"
-            timestampString = "399442232.065244"
+            timestampString = "399445274.225352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "-viewController:finishedWithAuth:error:"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "+driveService"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

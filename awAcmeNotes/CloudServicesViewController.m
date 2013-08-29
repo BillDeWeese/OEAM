@@ -28,6 +28,11 @@
     [super viewWillAppear:animated];
     [[self navigationController] setNavigationBarHidden:NO animated:NO];
     [self.navigationItem setHidesBackButton:NO];
+    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"GoogleDrive"] != nil)
+    {
+        _GoogleDriveCellTextLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"GoogleDrive"];
+    }
 }
 
 

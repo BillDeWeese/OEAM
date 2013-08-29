@@ -674,6 +674,9 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Cloud Services" id="ZNs-XL-q8d"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="GoogleDriveCellTextLabel" destination="tZy-z7-Ssf" id="HAy-nH-vlL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="415-Pm-Mfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

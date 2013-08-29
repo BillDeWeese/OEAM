@@ -48,8 +48,31 @@
     }
 }
 
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+
+    
+    BOOL USE_OEAM = [[NSUserDefaults standardUserDefaults] boolForKey:@"USE_OEAM"];
+    
+    if (USE_OEAM) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Change Disabled."
+                                                        message:@"This setting is controled by your company."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+        
+    }
+    
+    return NO;
+
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
     PasscodeViewController *viewController = [segue destinationViewController];
     if([segue.identifier isEqualToString:@"setPasscode"])
     {

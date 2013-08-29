@@ -16,18 +16,18 @@
 {
     
 
-
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"USE_OEAM"];
     
     
-    // Override point for customization after application launch.
     [[NSNotificationCenter defaultCenter] addObserver:[Notes class]
                                              selector:@selector(dataUpdatedFromCloud:)
                                                  name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
                                                object:[NSUbiquitousKeyValueStore defaultStore]];
     
     [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"GoogleDrive"];
-    
+ 
     [[NSUbiquitousKeyValueStore defaultStore] synchronize];
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(login_Success:)
@@ -48,8 +48,31 @@
     
     
     
-    [self goto_AppStart:nil];
     
+    
+    
+    BOOL USE_OEAM = [[NSUserDefaults standardUserDefaults] boolForKey:@"USE_OEAM"];
+    if (USE_OEAM) {
+        NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:
+                              [[NSBundle mainBundle] pathForResource:@"OEAM_Configuration" ofType:@"plist"]];
+  
+        if ([[dict valueForKeyPath:@"OEAM.Auth.requirePasscode"] boolValue] == YES) {
+            [self goto_AppStart:nil];
+        
+        }else{
+      
+            if ([[NSUserDefaults standardUserDefaults] valueForKey:@"LastUser"] !=nil) {
+                NSString *key = [NSString stringWithFormat:@"%@_%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"LastUser"], @"didVisitSettings" ];
+                if ([[NSUserDefaults standardUserDefaults] boolForKey:key] == YES) {
+                    [self login_Success:nil];
+                }
+            }
+        }
+   
+    }else{
+        [self goto_AppStart:nil];
+
+    }
     
     return YES;
 }
@@ -112,7 +135,6 @@
     [self.window makeKeyAndVisible];
     
 }
-
 
 
 -(void)login_Success:(NSNotification *)notification{

@@ -22,24 +22,24 @@
 			<key>profileImage</key>
 			<string></string>
 			<key>UID</key>
-			<string>bdeweese</string>
+			<string>jappleseed</string>
 			<key>domain</key>
-			<string>atlantawifi</string>
+			<string>NA</string>
 			<key>displayName</key>
-			<string>Bill DeWeese</string>
+			<string>John Appleseed</string>
 			<key>givenName</key>
-			<string>Bill</string>
+			<string>Johnny</string>
 			<key>SN</key>
-			<string>DeWeese</string>
+			<string>Appleseed</string>
 			<key>mail</key>
-			<string>billdeweese@air-watch.com</string>
+			<string>jappleseed@acmecloud.com</string>
 		</dict>
 		<key>ServiceEndPoint</key>
 		<dict>
 			<key>AppServiceUseSSL</key>
 			<true/>
 			<key>AppServiceHostname</key>
-			<string>tv.air-watch.com</string>
+			<string>acmecloud.airwdemo.com</string>
 			<key>AppServicePort</key>
 			<string>443</string>
 			<key>AppServicePath</key>
@@ -57,9 +57,9 @@
 		<key>Device</key>
 		<dict>
 			<key>DeviceUID</key>
-			<string>12345</string>
+			<string>0F325F89555313D8BC5C5C25FAF2497419ECE6AC</string>
 			<key>ManagementID</key>
-			<string>12345-12345</string>
+			<string>2D8948227578BC595B244519CB5BE351B42B367D</string>
 			<key>ManagementProvider</key>
 			<string>com.airwatch.airwatch</string>
 			<key>ManagementProviderURL</key>
@@ -68,18 +68,18 @@
 		<key>Logging</key>
 		<dict>
 			<key>LogLevel</key>
-			<string>4</string>
+			<string>2</string>
 		</dict>
 		<key>Restrictions</key>
 		<dict>
 			<key>allowCutCopyPaste</key>
 			<false/>
 			<key>allowCelluar</key>
-			<false/>
+			<true/>
 			<key>allowRoaming</key>
 			<false/>
 			<key>allowCloudSync</key>
-			<true/>
+			<false/>
 			<key>allowedCloudSyncApps</key>
 			<array>
 				<string>com.air-watch.content.locker</string>

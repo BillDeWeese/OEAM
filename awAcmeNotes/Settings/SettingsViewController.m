@@ -35,10 +35,22 @@
         self.navigationItem.rightBarButtonItem = nil;
     }
     
+    
+    
+    BOOL USE_OEAM = [[NSUserDefaults standardUserDefaults] boolForKey:@"USE_OEAM"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:
+                          [[NSBundle mainBundle] pathForResource:@"OEAM_Configuration" ofType:@"plist"]];
+    
+    
     ////////////////////////////////////
     ///  LogLevel
     ////////////////////////////////////
     int savedValue_LogLevel = [[[NSUserDefaults standardUserDefaults] valueForKey:@"LogLevel"] integerValue];
+    
+    if (USE_OEAM) {
+        savedValue_LogLevel = [[dict valueForKeyPath:@"OEAM.Logging.LogLevel"] integerValue];
+    }
+  
     if (savedValue_LogLevel == 0) {
         [self.Logging.detailTextLabel setText:@"Off"];
     }else{
@@ -54,6 +66,13 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"AllowTextCopy"];
     }
     BOOL savedValue_AllowTextCopy = [[NSUserDefaults standardUserDefaults] boolForKey:@"AllowTextCopy"];
+    self.AllowTextCopy.enabled = YES;
+    
+    if (USE_OEAM) {
+        savedValue_AllowTextCopy = [[dict valueForKeyPath:@"OEAM.Restrictions.allowCutCopyPaste"] integerValue];
+        self.AllowTextCopy.enabled = NO;
+    }
+    
     if (savedValue_AllowTextCopy == 0) {
         self.AllowTextCopy.on = NO;
     }else{
@@ -69,14 +88,19 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"AllowCellData"];
     }
     BOOL savedValue_AllowCellData = [[NSUserDefaults standardUserDefaults] boolForKey:@"AllowCellData"];
+    if (USE_OEAM) {
+        savedValue_AllowCellData = [[dict valueForKeyPath:@"OEAM.Restrictions.allowCelluar"] boolValue];
+    }
+    
     if (savedValue_AllowCellData == NO) {
        [self.CellularData.detailTextLabel setText:@"Off"];
     }else{
        [self.CellularData.detailTextLabel setText:@"On"];
     }
     
+    
     ////////////////////////////////////
-    ///  AllowCellData
+    ///  Require Passcode
     ////////////////////////////////////
     if([[NSUserDefaults standardUserDefaults] objectForKey:@"Passcode"] != nil)
     {
@@ -85,7 +109,14 @@
         _RequirePasscode.detailTextLabel.text = @"Off";
     }
     
-    
+    if (USE_OEAM) {
+        if ([[dict valueForKeyPath:@"OEAM.Auth.requirePasscode"] boolValue] == YES) {
+            self.RequirePasscode.detailTextLabel.text = @"On";
+        }else{
+            self.RequirePasscode.detailTextLabel.text = @"Off";
+        }
+    }
+
     
 }
 
@@ -123,5 +154,37 @@
     [[NSUserDefaults standardUserDefaults] setBool:self.AllowTextCopy.on forKey:@"AllowTextCopy"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    
+    
+    BOOL USE_OEAM = [[NSUserDefaults standardUserDefaults] boolForKey:@"USE_OEAM"];
+    
+    if (USE_OEAM) {
+  
+        if (![identifier isEqualToString:@"showPasscodeSettings"]) {
+            return YES;
+        }
+     
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Change Disabled."
+                                                        message:@"This setting is controled by your company."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+        
+    }else{
+    
+        return YES;
+        
+    }
+    
+    return NO;
+    
+}
+
+
 
 @end

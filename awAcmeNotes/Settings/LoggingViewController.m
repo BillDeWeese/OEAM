@@ -55,6 +55,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
  
+    
+    BOOL USE_OEAM = [[NSUserDefaults standardUserDefaults] boolForKey:@"USE_OEAM"];
+    if (USE_OEAM) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Change Disabled."
+                                                        message:@"This setting is controled by your company."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+        return;
+    }
+    
     for (UITableViewCell *c in self.items) {
         [c setAccessoryType:UITableViewCellAccessoryNone];
     }

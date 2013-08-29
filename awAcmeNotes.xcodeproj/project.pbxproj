@@ -122,9 +122,9 @@
 		96C2272D17CED8F300F555BB /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C2272C17CED8F300F555BB /* SettingsViewController.m */; };
 		96C2273017CEE07200F555BB /* PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C2272F17CEE07200F555BB /* PasswordViewController.m */; };
 		96C2273317CEE0FA00F555BB /* CloudServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C2273217CEE0FA00F555BB /* CloudServicesViewController.m */; };
-		96C2273517CEE69100F555BB /* OEAM_Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96C2273417CEE69100F555BB /* OEAM_Configuration.plist */; };
 		96F66ABC17CEF7D600E8138D /* LoggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F66ABB17CEF7D600E8138D /* LoggingViewController.m */; };
 		96F66ABF17CF04C500E8138D /* CellularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F66ABE17CF04C500E8138D /* CellularViewController.m */; };
+		96F66AC217CFAE7500E8138D /* OEAM_Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96F66AC117CFAE7500E8138D /* OEAM_Configuration.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -332,11 +332,11 @@
 		96C2272F17CEE07200F555BB /* PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PasswordViewController.m; path = Settings/PasswordViewController.m; sourceTree = "<group>"; };
 		96C2273117CEE0FA00F555BB /* CloudServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudServicesViewController.h; sourceTree = "<group>"; };
 		96C2273217CEE0FA00F555BB /* CloudServicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudServicesViewController.m; sourceTree = "<group>"; };
-		96C2273417CEE69100F555BB /* OEAM_Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OEAM_Configuration.plist; sourceTree = "<group>"; };
 		96F66ABA17CEF7D600E8138D /* LoggingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggingViewController.h; path = Settings/LoggingViewController.h; sourceTree = "<group>"; };
 		96F66ABB17CEF7D600E8138D /* LoggingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggingViewController.m; path = Settings/LoggingViewController.m; sourceTree = "<group>"; };
 		96F66ABD17CF04C500E8138D /* CellularViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellularViewController.h; path = Settings/CellularViewController.h; sourceTree = "<group>"; };
 		96F66ABE17CF04C500E8138D /* CellularViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellularViewController.m; path = Settings/CellularViewController.m; sourceTree = "<group>"; };
+		96F66AC117CFAE7500E8138D /* OEAM_Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OEAM_Configuration.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -702,7 +702,7 @@
 		96AEB95117CACFC700F087FF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				96C2273417CEE69100F555BB /* OEAM_Configuration.plist */,
+				96F66AC117CFAE7500E8138D /* OEAM_Configuration.plist */,
 				96AEB96817CACFC700F087FF /* Images.xcassets */,
 				96AEB98917CAE4AF00F087FF /* awAcmeNotes.entitlements */,
 				964EF76717CBA5C1006A02F2 /* Images */,
@@ -835,7 +835,7 @@
 				964EF78E17CBB6AF006A02F2 /* settings.png in Resources */,
 				964EF78F17CBB6AF006A02F2 /* settings@2x.png in Resources */,
 				964EF7A517CBD174006A02F2 /* Login_iPhone.storyboard in Resources */,
-				96C2273517CEE69100F555BB /* OEAM_Configuration.plist in Resources */,
+				96F66AC217CFAE7500E8138D /* OEAM_Configuration.plist in Resources */,
 				96AA7B5017CD8FDD008300BE /* infoButton@2x.png in Resources */,
 				96AA7B5C17CE6B7A008300BE /* Cloud.png in Resources */,
 				964EF7C417CC1926006A02F2 /* icon-trash.png in Resources */,

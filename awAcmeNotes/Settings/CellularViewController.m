@@ -29,6 +29,14 @@
 	// Do any additional setup after loading the view.
     
     
+    
+    BOOL USE_OEAM = [[NSUserDefaults standardUserDefaults] boolForKey:@"USE_OEAM"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:
+                          [[NSBundle mainBundle] pathForResource:@"OEAM_Configuration" ofType:@"plist"]];
+    
+  
+    
+    
     ////////////////////////////////////
     ///  AllowCellData
     ////////////////////////////////////
@@ -37,6 +45,11 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"AllowCellData"];
     }
     BOOL savedValue_AllowCellData = [[NSUserDefaults standardUserDefaults] boolForKey:@"AllowCellData"];
+    if (USE_OEAM) {
+        savedValue_AllowCellData = [[dict valueForKeyPath:@"OEAM.Restrictions.allowCelluar"] boolValue];
+        self.AllowCellData.enabled = NO;
+    }
+    
     if (savedValue_AllowCellData == 0) {
         self.AllowCellData.on = NO;
     }else{
@@ -52,6 +65,11 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"AllowDataRoaming"];
     }
     BOOL savedValue_AllowDataRoaming = [[NSUserDefaults standardUserDefaults] boolForKey:@"AllowDataRoaming"];
+    if (USE_OEAM) {
+        savedValue_AllowCellData = [[dict valueForKeyPath:@"OEAM.Restrictions.allowRoaming"] boolValue];
+        self.AllowDataRoaming.enabled = NO;
+    }
+
     if (savedValue_AllowDataRoaming == 0) {
         self.AllowDataRoaming.on = NO;
     }else{

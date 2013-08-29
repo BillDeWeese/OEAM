@@ -33,6 +33,25 @@
     
     [self setNextWizardButton];
     
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"USE_OEAM"]) {
+        NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:
+                              [[NSBundle mainBundle] pathForResource:@"OEAM_Configuration" ofType:@"plist"]];
+        
+        self.DomainCell.hidden = NO;
+        self.Domain_TextField.text = [dict valueForKeyPath:@"OEAM.User.domain"];
+        
+        self.Username_TextField.text = [dict valueForKeyPath:@"OEAM.User.UID"];
+        self.Username_TextField.enabled = NO;
+        self.Username_TextField.textColor = [UIColor lightGrayColor];
+        
+    }else{
+    
+        self.Username_TextField.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"LastUser"];
+    
+    }
+    
+    
 }
 
 

@@ -694,10 +694,10 @@
             </objects>
             <point key="canvasLocation" x="1185" y="-1100"/>
         </scene>
-        <!--Cloud Services View Controller - Cellular-->
+        <!--Cellular View Controller - Cellular-->
         <scene sceneID="2Ux-xY-Qe4">
             <objects>
-                <tableViewController id="5Ae-lc-Emq" customClass="CloudServicesViewController" sceneMemberID="viewController">
+                <tableViewController id="5Ae-lc-Emq" customClass="CellularViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9ve-Zf-nEd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -739,6 +739,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="w0r-Af-Ze5">
                                                     <rect key="frame" x="256" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="AllowCellData_onChange:" destination="5Ae-lc-Emq" eventType="valueChanged" id="OeF-El-L9Q"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -760,6 +763,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="KOV-zr-dtp">
                                                     <rect key="frame" x="256" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="AllowDataRoaming_onChange:" destination="5Ae-lc-Emq" eventType="valueChanged" id="gIk-8b-Q1C"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -771,6 +777,10 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Cellular" id="inz-QQ-Ffe"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="AllowCellData" destination="w0r-Af-Ze5" id="Efb-7c-7fZ"/>
+                        <outlet property="AllowDataRoaming" destination="KOV-zr-dtp" id="UKP-qb-8eW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMB-WF-xzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

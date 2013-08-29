@@ -76,6 +76,7 @@
 		96C2273317CEE0FA00F555BB /* CloudServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C2273217CEE0FA00F555BB /* CloudServicesViewController.m */; };
 		96C2273517CEE69100F555BB /* OEAM_Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96C2273417CEE69100F555BB /* OEAM_Configuration.plist */; };
 		96F66ABC17CEF7D600E8138D /* LoggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F66ABB17CEF7D600E8138D /* LoggingViewController.m */; };
+		96F66ABF17CF04C500E8138D /* CellularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F66ABE17CF04C500E8138D /* CellularViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +188,8 @@
 		96C2273417CEE69100F555BB /* OEAM_Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OEAM_Configuration.plist; sourceTree = "<group>"; };
 		96F66ABA17CEF7D600E8138D /* LoggingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggingViewController.h; path = Settings/LoggingViewController.h; sourceTree = "<group>"; };
 		96F66ABB17CEF7D600E8138D /* LoggingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggingViewController.m; path = Settings/LoggingViewController.m; sourceTree = "<group>"; };
+		96F66ABD17CF04C500E8138D /* CellularViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellularViewController.h; path = Settings/CellularViewController.h; sourceTree = "<group>"; };
+		96F66ABE17CF04C500E8138D /* CellularViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellularViewController.m; path = Settings/CellularViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +356,8 @@
 				96C2272F17CEE07200F555BB /* PasswordViewController.m */,
 				96C2273117CEE0FA00F555BB /* CloudServicesViewController.h */,
 				96C2273217CEE0FA00F555BB /* CloudServicesViewController.m */,
+				96F66ABD17CF04C500E8138D /* CellularViewController.h */,
+				96F66ABE17CF04C500E8138D /* CellularViewController.m */,
 				96F66ABA17CEF7D600E8138D /* LoggingViewController.h */,
 				96F66ABB17CEF7D600E8138D /* LoggingViewController.m */,
 			);
@@ -620,6 +625,7 @@
 				96AA7B6917CE7013008300BE /* SetupNavController.m in Sources */,
 				96AEB95717CACFC700F087FF /* main.m in Sources */,
 				964EF7AA17CBD73E006A02F2 /* LoginNavController.m in Sources */,
+				96F66ABF17CF04C500E8138D /* CellularViewController.m in Sources */,
 				96AA7B6617CE6F02008300BE /* WelcomeViewController.m in Sources */,
 				964EF7A117CBC6E7006A02F2 /* LoginViewController.m in Sources */,
 				964EF7AD17CBD803006A02F2 /* AskForServerViewController.m in Sources */,

@@ -56,6 +56,21 @@
     }
     
     
+    ////////////////////////////////////
+    ///  AllowCellData
+    ////////////////////////////////////
+    // Set some defaults.
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"AllowCellData"] == nil) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"AllowCellData"];
+    }
+    BOOL savedValue_AllowCellData = [[NSUserDefaults standardUserDefaults] boolForKey:@"AllowCellData"];
+    if (savedValue_AllowCellData == NO) {
+       [self.CellularData.detailTextLabel setText:@"Off"];
+    }else{
+       [self.CellularData.detailTextLabel setText:@"On"];
+    }
+    
+    
     
 }
 

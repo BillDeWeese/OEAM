@@ -677,7 +677,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Yy8-jZ-Xzs" kind="push" id="rDE-Sp-81f"/>
+                                            <segue destination="hWy-UM-vPa" kind="push" id="DiI-T3-Fne"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -688,29 +688,33 @@
                     <navigationItem key="navigationItem" title="Cloud Services" id="ZNs-XL-q8d"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="GoogleDriveCellTextLabel" destination="tZy-z7-Ssf" id="E7q-9q-riv"/>
+                        <outlet property="GoogleDriveCellTextLabel" destination="tZy-z7-Ssf" id="HAy-nH-vlL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="415-Pm-Mfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1185" y="-1100"/>
         </scene>
+<<<<<<< HEAD
         <!--Google Drive Login View Controller-->
-        <scene sceneID="Mvl-VS-4Es">
+        <scene sceneID="Lng-ZD-Igw">
             <objects>
-                <viewController id="Yy8-jZ-Xzs" customClass="GoogleDriveLoginViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3uM-Cs-kbX">
+                <viewController id="hWy-UM-vPa" customClass="GoogleDriveLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gc3-kz-iEG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3Pn-Fw-sG1"/>
+                    <navigationItem key="navigationItem" id="1ki-fW-cPZ"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FvN-nv-SrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtF-Ey-Lyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="-1090"/>
+            <point key="canvasLocation" x="1786" y="-1100"/>
         </scene>
+        <!--Cloud Services View Controller - Cellular-->
+=======
         <!--Cellular View Controller - Cellular-->
+>>>>>>> initial
         <scene sceneID="2Ux-xY-Qe4">
             <objects>
                 <tableViewController id="5Ae-lc-Emq" customClass="CellularViewController" sceneMemberID="viewController">

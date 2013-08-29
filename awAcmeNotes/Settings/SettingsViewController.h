@@ -14,4 +14,13 @@
 -(IBAction)finish_onClick:(id)sender;
 
 
+@property (nonatomic, weak) IBOutlet UITableViewCell *RequirePasscode;
+@property (nonatomic, weak) IBOutlet UITableViewCell *CloudServices;
+@property (nonatomic, weak) IBOutlet UITableViewCell *CellularData;
+@property (nonatomic, weak) IBOutlet UITableViewCell *AllowTextCopy;
+@property (nonatomic, weak) IBOutlet UITableViewCell *Logging;
+
+
+
+
 @end

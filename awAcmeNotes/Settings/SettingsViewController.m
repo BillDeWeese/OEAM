@@ -28,6 +28,13 @@
     [super viewWillAppear:animated];
     [[self navigationController] setNavigationBarHidden:NO animated:NO];
     [self.navigationItem setHidesBackButton:YES];
+    
+    int selectedLogLevel = [[[NSUserDefaults standardUserDefaults] valueForKey:@"LogLevel"] integerValue];
+    if (selectedLogLevel == 0) {
+        [self.Logging.detailTextLabel setText:@"Off"];
+    }else{
+        [self.Logging.detailTextLabel setText:@"On"];
+    }
 }
 
 
@@ -40,6 +47,10 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+
+    
 }
 
 - (void)didReceiveMemoryWarning

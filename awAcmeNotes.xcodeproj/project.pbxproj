@@ -75,6 +75,7 @@
 		96C2273017CEE07200F555BB /* PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C2272F17CEE07200F555BB /* PasswordViewController.m */; };
 		96C2273317CEE0FA00F555BB /* CloudServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C2273217CEE0FA00F555BB /* CloudServicesViewController.m */; };
 		96C2273517CEE69100F555BB /* OEAM_Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96C2273417CEE69100F555BB /* OEAM_Configuration.plist */; };
+		96F66ABC17CEF7D600E8138D /* LoggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F66ABB17CEF7D600E8138D /* LoggingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,8 @@
 		96C2273117CEE0FA00F555BB /* CloudServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudServicesViewController.h; sourceTree = "<group>"; };
 		96C2273217CEE0FA00F555BB /* CloudServicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudServicesViewController.m; sourceTree = "<group>"; };
 		96C2273417CEE69100F555BB /* OEAM_Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OEAM_Configuration.plist; sourceTree = "<group>"; };
+		96F66ABA17CEF7D600E8138D /* LoggingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggingViewController.h; path = Settings/LoggingViewController.h; sourceTree = "<group>"; };
+		96F66ABB17CEF7D600E8138D /* LoggingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggingViewController.m; path = Settings/LoggingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +353,8 @@
 				96C2272F17CEE07200F555BB /* PasswordViewController.m */,
 				96C2273117CEE0FA00F555BB /* CloudServicesViewController.h */,
 				96C2273217CEE0FA00F555BB /* CloudServicesViewController.m */,
+				96F66ABA17CEF7D600E8138D /* LoggingViewController.h */,
+				96F66ABB17CEF7D600E8138D /* LoggingViewController.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -603,6 +608,7 @@
 				964EF77F17CBA83D006A02F2 /* MainViewController.m in Sources */,
 				96AA7B6C17CE741F008300BE /* SignUpViewController.m in Sources */,
 				96C2272D17CED8F300F555BB /* SettingsViewController.m in Sources */,
+				96F66ABC17CEF7D600E8138D /* LoggingViewController.m in Sources */,
 				964EF7B617CBF128006A02F2 /* ProfileViewController.m in Sources */,
 				964EF77717CBA73B006A02F2 /* GHSidebarSearchViewController.m in Sources */,
 				964EF76317CB9DEB006A02F2 /* MenuCell.m in Sources */,

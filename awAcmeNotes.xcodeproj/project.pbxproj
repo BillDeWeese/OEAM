@@ -35,7 +35,6 @@
 		964EF7AF17CBE028006A02F2 /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 964EF7AE17CBE028006A02F2 /* profile.jpg */; };
 		964EF7B217CBF012006A02F2 /* Profile_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964EF7B117CBF012006A02F2 /* Profile_iPhone.storyboard */; };
 		964EF7B617CBF128006A02F2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF7B517CBF128006A02F2 /* ProfileViewController.m */; };
-		964EF7B917CC0692006A02F2 /* Settings_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964EF7B817CC057B006A02F2 /* Settings_iPhone.storyboard */; };
 		964EF7BC17CC09A0006A02F2 /* icon-contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 964EF7BA17CC09A0006A02F2 /* icon-contacts.png */; };
 		964EF7BD17CC09A0006A02F2 /* icon-contacts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 964EF7BB17CC09A0006A02F2 /* icon-contacts@2x.png */; };
 		964EF7C417CC1926006A02F2 /* icon-trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 964EF7C217CC1926006A02F2 /* icon-trash.png */; };
@@ -128,7 +127,6 @@
 		964EF7B117CBF012006A02F2 /* Profile_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile_iPhone.storyboard; sourceTree = "<group>"; };
 		964EF7B417CBF128006A02F2 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Profile/ProfileViewController.h; sourceTree = "<group>"; };
 		964EF7B517CBF128006A02F2 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Profile/ProfileViewController.m; sourceTree = "<group>"; };
-		964EF7B817CC057B006A02F2 /* Settings_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings_iPhone.storyboard; sourceTree = "<group>"; };
 		964EF7BA17CC09A0006A02F2 /* icon-contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-contacts.png"; sourceTree = "<group>"; };
 		964EF7BB17CC09A0006A02F2 /* icon-contacts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-contacts@2x.png"; sourceTree = "<group>"; };
 		964EF7C217CC1926006A02F2 /* icon-trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-trash.png"; sourceTree = "<group>"; };
@@ -412,22 +410,17 @@
 		96AEB95017CACFC700F087FF /* awAcmeNotes */ = {
 			isa = PBXGroup;
 			children = (
-				96AA7B5917CE6536008300BE /* AppStart_iPhone.storyboard */,
-				96AEB95C17CACFC700F087FF /* Main_iPhone.storyboard */,
-				964EF7A417CBCF7D006A02F2 /* Login_iPhone.storyboard */,
-				964EF7B117CBF012006A02F2 /* Profile_iPhone.storyboard */,
-				964EF7B817CC057B006A02F2 /* Settings_iPhone.storyboard */,
-				96AA7B5417CE437E008300BE /* About_iPhone.storyboard */,
-				964EF76A17CBA73B006A02F2 /* GHSidebarNav */,
+				964EF77D17CBA83D006A02F2 /* MainViewController.h */,
+				964EF77E17CBA83D006A02F2 /* MainViewController.m */,
 				964EF79E17CBC61F006A02F2 /* AppDelegate */,
+				96F66AC017CF095500E8138D /* Storyboards */,
+				964EF76A17CBA73B006A02F2 /* GHSidebarNav */,
 				964EF75E17CB9D95006A02F2 /* Menu */,
 				964EF7B317CBF10B006A02F2 /* Profile */,
 				964EF79C17CBC4DF006A02F2 /* Login */,
 				964EF79D17CBC5F2006A02F2 /* Notes */,
 				964EF7B717CC0506006A02F2 /* Settings */,
 				96AA7B6317CE6EE7008300BE /* AppStart */,
-				964EF77D17CBA83D006A02F2 /* MainViewController.h */,
-				964EF77E17CBA83D006A02F2 /* MainViewController.m */,
 				96AEB95117CACFC700F087FF /* Supporting Files */,
 			);
 			path = awAcmeNotes;
@@ -464,6 +457,18 @@
 				96AEB97817CACFC700F087FF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96F66AC017CF095500E8138D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				96AA7B5917CE6536008300BE /* AppStart_iPhone.storyboard */,
+				96AEB95C17CACFC700F087FF /* Main_iPhone.storyboard */,
+				964EF7A417CBCF7D006A02F2 /* Login_iPhone.storyboard */,
+				964EF7B117CBF012006A02F2 /* Profile_iPhone.storyboard */,
+				96AA7B5417CE437E008300BE /* About_iPhone.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,7 +568,6 @@
 				964EF7A317CBC919006A02F2 /* cloudnotes.jpeg in Resources */,
 				964EF7C417CC1926006A02F2 /* icon-trash.png in Resources */,
 				964EF76917CBA5D7006A02F2 /* menu.png in Resources */,
-				964EF7B917CC0692006A02F2 /* Settings_iPhone.storyboard in Resources */,
 				964EF7A717CBD6B9006A02F2 /* Header.png in Resources */,
 				964EF78A17CBB62F006A02F2 /* account.png in Resources */,
 				96AEB96917CACFC700F087FF /* Images.xcassets in Resources */,

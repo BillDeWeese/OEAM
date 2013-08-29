@@ -25,10 +25,15 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
+ 
     [super viewWillAppear:animated];
     [[self navigationController] setNavigationBarHidden:NO animated:NO];
     [self.navigationItem setHidesBackButton:YES];
   
+    // Only show the finish button if I am in the setup wizard.
+    if ([[self.navigationController.viewControllers objectAtIndex:0 ] isEqual:self]) {
+        self.navigationItem.rightBarButtonItem = nil;
+    }
     
     ////////////////////////////////////
     ///  LogLevel

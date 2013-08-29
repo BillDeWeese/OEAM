@@ -124,7 +124,7 @@
     /////////////////////////////////////
     if ([[SelectedItem valueForKey:@"title"] isEqualToString:@"Settings"]) {
         
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Settings_iPhone" bundle:nil];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AppStart_iPhone" bundle:nil];
         UIViewController *Controller = [storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
         [self addMenuButtonToController:Controller];
     

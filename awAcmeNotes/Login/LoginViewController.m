@@ -88,7 +88,7 @@
     
    
     UIColor* imageBorderColor = darkColor;
-    self.headerImageView.image = [UIImage imageNamed:@"cloudnotes.jpeg"];
+    self.headerImageView.image = [UIImage imageNamed:@"Cloud"];
     self.headerImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.headerImageView.clipsToBounds = YES;
     self.headerImageView.layer.borderWidth = 4.0f;

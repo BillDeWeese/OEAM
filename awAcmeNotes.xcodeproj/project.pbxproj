@@ -27,7 +27,6 @@
 		964EF79A17CBB8A8006A02F2 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 964EF79817CBB8A8006A02F2 /* check.png */; };
 		964EF79B17CBB8A8006A02F2 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 964EF79917CBB8A8006A02F2 /* check@2x.png */; };
 		964EF7A117CBC6E7006A02F2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF7A017CBC6E7006A02F2 /* LoginViewController.m */; };
-		964EF7A317CBC919006A02F2 /* cloudnotes.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 964EF7A217CBC919006A02F2 /* cloudnotes.jpeg */; };
 		964EF7A517CBD174006A02F2 /* Login_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964EF7A417CBCF7D006A02F2 /* Login_iPhone.storyboard */; };
 		964EF7A717CBD6B9006A02F2 /* Header.png in Resources */ = {isa = PBXBuildFile; fileRef = 964EF7A617CBD6B9006A02F2 /* Header.png */; };
 		964EF7AA17CBD73E006A02F2 /* LoginNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF7A917CBD73E006A02F2 /* LoginNavController.m */; };
@@ -116,7 +115,6 @@
 		964EF79917CBB8A8006A02F2 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
 		964EF79F17CBC6E7006A02F2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		964EF7A017CBC6E7006A02F2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
-		964EF7A217CBC919006A02F2 /* cloudnotes.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cloudnotes.jpeg; sourceTree = "<group>"; };
 		964EF7A417CBCF7D006A02F2 /* Login_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login_iPhone.storyboard; sourceTree = "<group>"; };
 		964EF7A617CBD6B9006A02F2 /* Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Header.png; sourceTree = "<group>"; };
 		964EF7A817CBD73E006A02F2 /* LoginNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginNavController.h; path = Login/LoginNavController.h; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 				964EF7BA17CC09A0006A02F2 /* icon-contacts.png */,
 				964EF7BB17CC09A0006A02F2 /* icon-contacts@2x.png */,
 				964EF7A617CBD6B9006A02F2 /* Header.png */,
-				964EF7A217CBC919006A02F2 /* cloudnotes.jpeg */,
 				964EF78817CBB62F006A02F2 /* account.png */,
 				964EF78917CBB62F006A02F2 /* account@2x.png */,
 				964EF76817CBA5D7006A02F2 /* menu.png */,
@@ -565,7 +562,6 @@
 				96C2273517CEE69100F555BB /* OEAM_Configuration.plist in Resources */,
 				96AA7B5017CD8FDD008300BE /* infoButton@2x.png in Resources */,
 				96AA7B5C17CE6B7A008300BE /* Cloud.png in Resources */,
-				964EF7A317CBC919006A02F2 /* cloudnotes.jpeg in Resources */,
 				964EF7C417CC1926006A02F2 /* icon-trash.png in Resources */,
 				964EF76917CBA5D7006A02F2 /* menu.png in Resources */,
 				964EF7A717CBD6B9006A02F2 /* Header.png in Resources */,

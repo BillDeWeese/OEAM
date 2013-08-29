@@ -22,7 +22,7 @@
     
     [[NSUbiquitousKeyValueStore defaultStore] synchronize];
     
-    
+    //Hi
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(login_Success:)
